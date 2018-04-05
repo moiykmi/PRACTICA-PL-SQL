@@ -1,0 +1,36 @@
+
+/**COMANDO IF**/
+--EJEMPLO 1
+SET SERVEROUTPUT ON
+DECLARE
+    X NUMBER := 20;
+BEGIN
+    IF
+        X = 10
+    THEN
+        DBMS_OUTPUT.PUT_LINE(' X := 10');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(' X := OTHER VALUE');
+    END IF;
+END;
+
+--EJEMPLO 2
+SET SERVEROUTPUT ON
+DECLARE
+    SALES NUMBER := 25000;
+    BONUS NUMBER := 0;
+BEGIN
+    IF SALES > 50000 THEN
+        BONUS := 1500;
+    ELSIF SALES > 35000 THEN
+        BONUS := 500;
+    ELSIF SALES > 20000 THEN
+        BONUS := 150;
+    ELSE
+        BONUS := 100;
+    END IF;
+    
+    DBMS_OUTPUT.PUT_LINE('SALES = '|| SALES || ', BONUS = '|| BONUS ||'.');
+            
+END;
+

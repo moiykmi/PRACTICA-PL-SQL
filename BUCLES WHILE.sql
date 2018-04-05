@@ -1,0 +1,21 @@
+/**BUCLES WHILE**/
+DECLARE
+    DONE BOOLEAN := FALSE;
+    X NUMBER := 0;
+BEGIN
+    WHILE X < 10 LOOP
+        DBMS_OUTPUT.PUT_LINE(X);
+        X := X + 1;
+        EXIT WHEN X = 5 ;
+    END LOOP;
+
+    WHILE DONE LOOP
+        DBMS_OUTPUT.PUT_LINE('NO IMPRIMAS ESTO.');
+        DONE := TRUE;
+    END LOOP;
+    
+    WHILE NOT DONE LOOP
+        DBMS_OUTPUT.PUT_LINE('HE PASADO POR AQUI');
+        DONE := TRUE;
+    END LOOP;
+END;
